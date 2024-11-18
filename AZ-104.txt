@@ -1,1 +1,4 @@
-Azure cloud shell is browser-accessible command-line experience for managing Azure resources.
+Azure cloud shell :
+is browser-accessible command-line experience for managing Azure resources.
+provides cloud storage to persist files such as SSH keys, scripts, and more.
+ CloudDrive or File Share keeps your uploaded files or created one during a session. 
