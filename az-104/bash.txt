@@ -51,3 +51,5 @@ cp photos/* images
 This assumes that the images directory already exists. If it doesn't, you can create it and copy the contents of the photos directory by using this command:
 cp -r photos images
 The -r stands for "recursive." An added benefit of the -r flag is that if photos contains subdirectories of its own, they too are copied to the images directory.
+
+Linux provides the w (for "who") command. It displays information about the users currently on the computer system and those users' activities. w shows user names, their IP addresses, when they logged in, what processes they're currently running, and how much time those processes are consuming. It's a valuable tool for sysadmins.
