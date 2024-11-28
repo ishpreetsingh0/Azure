@@ -5,3 +5,6 @@ ls -a
 
 To get even more information about the files and directories in the current directory, use an -l flag:
 ls -l
+
+cat command
+Suppose you want to see what's inside a file. You can use the cat command for that.
