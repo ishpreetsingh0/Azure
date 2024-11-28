@@ -8,3 +8,6 @@ ls -l
 
 cat command
 Suppose you want to see what's inside a file. You can use the cat command for that.
+
+sudo command
+Some Bash commands can only be run by the root user; a system administrator or superuser
