@@ -88,3 +88,5 @@ Enter the following command to understand more about what cat is and how to use 
 man cat
 Yes, you entered "man cat" into your shell. Bash commands can be both cryptic and amusing!
 
+python3 bad.py &
+Be sure to include the ampersand (&) at the end of the command. Otherwise, you won't return to the Bash prompt. In Bash, the ampersand runs a command and returns to the command line, even if the command hasn't finished running.
