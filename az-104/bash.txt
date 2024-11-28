@@ -90,3 +90,17 @@ Yes, you entered "man cat" into your shell. Bash commands can be both cryptic an
 
 python3 bad.py &
 Be sure to include the ampersand (&) at the end of the command. Otherwise, you won't return to the Bash prompt. In Bash, the ampersand runs a command and returns to the command line, even if the command hasn't finished running.
+
+Kill the process
+To kill a process, you need the process name or process ID. This is a job for ps.
+To refresh your memory, a ps -ef command lists all running processes and displays a great deal of information about each. Use the following command to list all running processes and filter the results to lines that contain "python":
+ps -ef | grep python
+From the listing, it appears that bad.py is consuming 99 percent of the server's CPU time. The program is living up to its name.
+The kill command kills a running process based on its process ID. (A related command named killall kills a process based on the process name.) When you call kill, you have to decide what kind of "signal" to use to kill the process. Use the following command to display a list of signal types:
+kill -l
+If you were killing a daemon process—one that runs in the background and provides vital services to the operating system—you might want to kill it and immediately restart it. To do that, you could use a SIGHUP signal.
+In this example, you want to kill the process without restarting it. Therefore, you want to use the SIGKILL signal, which corresponds to the number 9. To that end, grab bad.py's process ID from the ps -ef output (it's in the second column) and use the following command to terminate the process. Replace PROCESS_ID with the process ID.
+kill -9 PROCESS_ID
+The same command can also be entered as kill -s SIGKILL PROCESS_ID. Whether you use a signal's name or number is up to you.
+Finish by running ps again to confirm that bad.py is no longer running.
+Another common use for ps and kill is to identify and terminate "zombie processes," which are child processes left behind by poorly written programs.
