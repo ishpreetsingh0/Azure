@@ -11,3 +11,16 @@ Suppose you want to see what's inside a file. You can use the cat command for th
 
 sudo command
 Some Bash commands can only be run by the root user; a system administrator or superuser
+
+cd, mkdir, and rmdir commands
+cd stands for "change directory," and it does exactly what the name suggests: it changes the current directory to another directory. It enables you to move from one directory to another just like its counterpart in Windows. The following command changes to a subdirectory of the current directory named orders:
+cd orders
+You can move up a directory by specifying .. as the directory name:
+cd ..
+This command changes to your home directory; the one you land in when you first sign in:
+cd ~
+You can create directories by using the mkdir command. The following command creates a subdirectory named orders in the current working directory:
+mkdir orders
+If you want to create a subdirectory and another subdirectory under it with one command, use the --parents flag:
+mkdir --parents orders/2019
+The rmdir command deletes (removes) a directory, but only if it's empty. If it's not empty, you get a warning instead. Fortunately, you can use the rm command to delete directories that aren't empty in combination with the -r (recursive) flag. The command would then look like so, rm -r.
