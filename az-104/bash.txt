@@ -61,3 +61,19 @@ This flag shows the names of all the running processes, their process identifica
 ps command gives you a snapshot of all the currently running processes. By itself, with no arguments, it shows all your shell processes; in other words, not much. But it's a different story when you include a -e flag:
 ps -e
 -e lists all running processes, and there are typically many of them.
+
+Bash I/O operators
+You can do a lot in Linux just by exercising Bash commands and their many options. But you can really get work done when you combine commands by using I/O operators:
+< for redirecting input to a source other than the keyboard
+> for redirecting output to destination other than the screen
+>> for doing the same, but appending rather than overwriting
+| for piping output from one command to the input of another
+
+ls > listing.txt
+ls >> listing.txt
+ps -ef | more
+ps -ef | head
+ps -ef | grep daemon
+sort < file.txt
+sort < file.txt > sorted_file.txt
+cat file.txt | fmt | pr | lpr
