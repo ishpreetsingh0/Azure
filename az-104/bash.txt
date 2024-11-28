@@ -1,0 +1,7 @@
+ls : ls lists the contents of your current directory or the directory specified in an argument to the command.
+
+Files and directories whose names begin with a period are hidden by default. To include these items in a directory listing, use an -a flag:
+ls -a
+
+To get even more information about the files and directories in the current directory, use an -l flag:
+ls -l
