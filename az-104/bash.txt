@@ -77,3 +77,8 @@ ps -ef | grep daemon
 sort < file.txt
 sort < file.txt > sorted_file.txt
 cat file.txt | fmt | pr | lpr
+
+. refers to your current directory, and .. refers to your parent directory. Wherever you are, if you print all hidden files and directories, you see . and .. printed.
+.bash_history is a special Bash file where all commands that you enter into the shell are stored. Bash remembers your command history, which, as we see later, is useful.
+.bash_logout is another special Bash file that is read and run every time a sign-in shell exists. Linux superusers can modify it to customize your environment.
+.bashrc is an important Bash configuration file that runs whenever you start a new shell. If you decide to open this file to look at it, be careful about making changes, because they can have unintended consequences.
