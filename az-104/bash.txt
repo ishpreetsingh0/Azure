@@ -37,3 +37,17 @@ Make it a habit to include -i in every rm command, and you might avoid falling v
 If you want to delete a subdirectory named orders that isn't empty, you can use the rm command this way:
 rm -r orders
 This deletes the orders subdirectory and everything in it, including other subdirectories.
+
+cp command
+The cp command copies not just files, but entire directories (and subdirectories) if you want. To make a copy of 0001.jpg named 0002.jpg, use this command:
+cp 0001.jpg 0002.jpg
+If 0002.jpg already exists, Bash silently replaces it. That's great if it's what you intended, but not so wonderful if you didn't realize you were about to overwrite the old version.
+Fortunately, if you use the -i (for "interactive") flag, Bash warns you before deleting existing files. This is safer:
+cp -i 0001.jpg 0002.jpg
+You can use wildcards to copy several files at once. To copy all the files in the current directory to a subdirectory named photos, do this:
+cp * photos
+To copy all the files in a subdirectory named photos into a subdirectory named images, do this:
+cp photos/* images
+This assumes that the images directory already exists. If it doesn't, you can create it and copy the contents of the photos directory by using this command:
+cp -r photos images
+The -r stands for "recursive." An added benefit of the -r flag is that if photos contains subdirectories of its own, they too are copied to the images directory.
