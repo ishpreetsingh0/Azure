@@ -24,3 +24,16 @@ mkdir orders
 If you want to create a subdirectory and another subdirectory under it with one command, use the --parents flag:
 mkdir --parents orders/2019
 The rmdir command deletes (removes) a directory, but only if it's empty. If it's not empty, you get a warning instead. Fortunately, you can use the rm command to delete directories that aren't empty in combination with the -r (recursive) flag. The command would then look like so, rm -r.
+
+rm command
+The rm command is short for "remove." As you'd expect, rm deletes files. So this command puts an end to 0001.jpg:
+rm 0001.jpg
+And this command deletes all the files in the current directory:
+rm *
+Be wary of rm. It's a dangerous command.
+Running rm with a -i flag lets you think before you delete:
+rm -i *
+Make it a habit to include -i in every rm command, and you might avoid falling victim to one of Linux's biggest blunders. The dreaded rm -rf / command deletes every file on an entire drive. It works by recursively deleting all the subdirectories of root and their subdirectories. The -f (for "force") flag compounds the problem by suppressing prompts. Don't do this.
+If you want to delete a subdirectory named orders that isn't empty, you can use the rm command this way:
+rm -r orders
+This deletes the orders subdirectory and everything in it, including other subdirectories.
